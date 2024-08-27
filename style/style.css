@@ -1,0 +1,276 @@
+/*------------------- Importar  -------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+/*------------------- Variables -------------------*/
+:root {
+  --temaclaro-fondo: rgb(175, 175, 175);
+  --temaclaro-fondo-claro: rgb(200, 200, 200);
+  --temaclaro-frente: rgb(0, 0, 0);
+  --temaclaro-frente-claro: rgb(100, 100, 100);
+  --temaclaro-emfasis: rgb(160, 15, 15);
+  --temaclaro-emfasis-claro: rgb(160, 85, 85);
+
+  --temaoscuro-fondo: rgb(0, 0, 0);
+  --temaoscuro-fondo-claro: rgb(80, 80, 80);
+  --temaoscuro-frente: rgb(226, 226, 226);
+  --temaoscuro-frente-claro: rgb(121, 121, 121);
+  --temaoscuro-emfasis: rgb(160, 15, 15);
+
+  --primary-font: "Quicksand", sans-serif;
+  --secondary-font: "Kanit", sans-serif;
+
+  --primary-gradient: linear-gradient(45deg, #7c7c8a, rgb(118, 225, 252));
+  --secondary-gradient: linear-gradient(45deg, rgb(118, 225, 252), #7c7c8a);
+}
+
+/*------------------- Globales -------------------*/
+* {
+  font-size: 16px;
+  font-family: var(--primary-font);
+  line-height: 130%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--temaclaro-fondo);
+  box-sizing: border-box;
+}
+
+/*------------------- Cabezal con titulo y logo -------------------*/
+
+.header {
+  padding: 2% 0% 0% 15%;
+  display: flex;
+  width: 80rem;
+}
+
+.header__logo {
+  width: 3rem;
+  vertical-align: middle;
+}
+
+.encriptador__titulo {
+  font-family: var(--primary-font);
+  color: var(--temaclaro-frente);
+  font-weight: 800;
+  font-size: 2.25rem;
+}
+
+/*------------------- Encriptador -------------------*/
+.encriptador {
+  height: 100%;
+  max-width: 1440px;
+  margin: 1rem auto;
+  padding: 6% 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.encriptador__textarea__texto {
+  flex-basis: 100%;
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  color: var(--temaclaro-frente);
+  text-transform: lowercase;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.encriptador__textarea__texto::placeholder {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  color: var(--temaclaro-frente-claro);
+  text-transform: none;
+}
+
+.encriptador__pista {
+  padding: 1rem;
+  display: flex;
+}
+
+.encriptador__pista__img {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.encriptador__pista__texto {
+  font-size: 1.4rem;
+  color: var(--temaclaro-frente);
+}
+.encriptador__botoneos {
+  display: flex;
+}
+
+.encriptador__boton {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+  border: none;
+  color: var(--temaclaro-fondo);
+  background-color: var(--temaclaro-emfasis);
+  width: 328px;
+  padding: 24px;
+  gap: 8px;
+}
+
+.encriptador__boton:hover {
+  cursor: pointer;
+  color: var(--temaclaro-fondo-claro);
+  transform: scale(0.9);
+}
+
+/*------------------- Mensaje -------------------*/
+.mensaje__textarea {
+  background-image: url(/img/muñeco.svg);
+  background-color: var(--temaclaro-fondo-claro);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 5px 15px -10px var(--temaclaro-frente);
+  -moz-box-shadow: 0px 5px 15px -10px var(--temaclaro-frente);
+  box-shadow: 0px 5px 15px -10px var(--temaclaro-frente);
+
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.mensaje__textarea__texto {
+  z-index: -1;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  border-radius: 1rem;
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  color: var(--temaclaro-frente);
+  padding: 0.8rem;
+}
+
+.mensaje__boton {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 3rem;
+  border: none;
+  color: var(--temaclaro-fondo);
+  background-color: var(--temaclaro-emfasis);
+  padding: 24px;
+  gap: 8px;
+  display:none;
+}
+
+.mensaje__boton:hover {
+  cursor: pointer;
+  color: var(--temaclaro-fondo-claro);
+  background-color: var(--temaclaro-frente);
+  transform: scale(0.9);
+}
+
+/*------------------- Pie -------------------*/
+footer {
+  background-color: var(--temaclaro-emfasis);
+  color: var(--temaclaro-fondo);
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.footer__logo {
+  width: 2rem;
+}
+
+.footer__texto {
+  font-family: var(--secondary-font);
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+
+
+/*------------------- Media Queries para tamaño -------------------*/
+@media  (max-width: 768px) {
+/*------------------- Globales -------------------*/
+* {
+  font-size: 12px;
+  line-height: 110%;
+  }
+
+/*------------------- Cabezal con titulo y logo -------------------*/
+
+.header {
+  padding: 2% 0% 0% 15%;
+  display: flex;
+  width: 80rem;
+}
+
+/*------------------- Encriptador -------------------*/
+.encriptador {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.encriptador__textarea__texto {
+  border-radius: 0.75rem;
+}
+
+
+.encriptador__boton {
+  width: 250px;
+}
+
+/*------------------- Mensaje -------------------*/
+.mensaje__textarea {
+  border-radius: 0.75rem;
+  
+}
+
+.mensaje__textarea__texto {
+  border-radius: 0.75rem;
+  
+}
+
+
+
+  
+}
+
+/*------------------- Media queries para tema oscuro -------------------*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--temaoscuro-fondo);
+  }
+
+  .encriptador__textarea__texto {
+    color: var(--temaoscuro-frente);
+  }
+
+  .encriptador__textarea__texto::placeholder {
+    color: var(--temaoscuro-frente-claro);
+  }
+
+  .encriptador__titulo {
+    color: var(--temaoscuro-frente);
+  }
+
+  .encriptador__pista__texto {
+    color: var(--temaoscuro-frente);
+  }
+
+  .mensaje__textarea {
+    background-color: var(--temaoscuro-fondo-claro);
+    -webkit-box-shadow: 0px 5px 15px -10px var(--temaoscuro-frente);
+    -moz-box-shadow: 0px 5px 15px -10px var(--temaoscuro-frente);
+    box-shadow: 0px 5px 15px -10px var(--temaoscuro-frente);
+  }
+}

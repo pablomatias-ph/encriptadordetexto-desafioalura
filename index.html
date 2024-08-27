@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css">
+    <title>Alura Latam - Encriptador de Texto</title>
+  </head>
+
+  <body>
+    <!------------ Cabezal con titulo y logo ------------>
+    <header class="header">
+      <h1 class="encriptador__titulo">
+        <img
+          class="header__logo"
+          src="img/logo-alura.svg"
+          alt="Logo de alura"
+        />
+        Encriptador de Texto
+      </h1>
+    </header>
+    <!------------------- Encriptador ------------------->
+    <main class="encriptador">
+      <section class="encriptador__textarea">
+        <textarea
+          id="lectura"
+          class="encriptador__textarea__texto"
+          placeholder="Ingrese el mensaje"
+          cols="30"
+          rows="7"
+        ></textarea>
+
+        <div class="encriptador__pista">
+          <img
+            class="encriptador__pista__img"
+            src="img/exclamation.svg"
+            alt="Atención"
+          />
+          <p class="encriptador__pista__texto">
+            Solo letras minúsculas y sin acentos
+          </p>
+        </div>
+
+        <div class="encriptador__botones">
+          <button id="encriptar" class="encriptador__boton" onclick="botonEncriptar()">Encriptar</button>
+          <button id="desencriptar" class="encriptador__boton" onclick="botonDesencriptar()">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <!------------------- Mensaje ------------------->
+      <section class="mensaje__textarea">
+        
+        <textarea
+          class="mensaje__textarea__texto"
+          cols="30"
+          rows="7"
+          readonly="readonly"
+        ></textarea>
+        <div class="mensaje__botones">
+          <button id="copiar" class="mensaje__boton" onclick="copiarTexto()">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <!------------------- Pie de la pagina con datos ------------------->
+    <footer>
+      <img class="footer__logo" src="img/logo-alura.svg" alt="Logo de alura" />
+      <p class="footer__texto">
+        Desarrollado por Pablo Matias Pidone - Alura Latam
+      </p>
+    </footer>
+    <!------------------- Aplicacion JavaScript ------------------->
+    <script src="script/app.js"></script>
+  </body>
+</html>
